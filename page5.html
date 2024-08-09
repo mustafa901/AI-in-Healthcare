@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pareto Curve Simulation</title>
+    <link rel="stylesheet" type="text/css" href="page.css" />
+  </head>
+  <body>
+    <div class="content">
+      <h1>Fairness vs Accuracy in AI Decision Making:</h1>
+      <section>
+        <h2>Defining Fairness:</h2>
+        <p>
+          AI decision-making systems in healthcare have the potential to enhance
+          diagnostic accuracy, treatment planning, and resource allocation.
+          However, ethical dilemmas emerge concerning transparency,
+          accountability, and the balance between algorithmic recommendations
+          and human judgment. Additionally, biases embedded in training data can
+          perpetuate disparities in healthcare delivery.
+        </p>
+        <p>
+          The simplest notion of fairness applied to the predictions or
+          decisions of a model is known as statistical parity. Let's say a
+          health insurance company is using a machine learning model to decide
+          how much should the insurance premium be for individuals. Statistical
+          parity demands that for the underlying groups of individuals (based on
+          rance and other criterion) pay the same amount of money on average. It
+          does not take into consideration about the actual health risks of
+          indivudls. But this might lead to a completely fair system because
+          people who does not need that much medical attension may end up paying
+          more that they should just to ensure statistical parity. Problem with
+          statistical parity is that it can be violated even when the algorithm
+          is making "perfect" decisions.
+        </p>
+      </section>
+
+      <section>
+        <h2>Fairness Fighting Accuracy:</h2>
+        <p>
+          Fairness refers to the equitable treatment of individuals from
+          different demographic groups, ensuring that the model's predictions
+          are not biased or discriminatory. Accuracy, on the other hand,
+          measures how well the machine learning model performs in making
+          correct predictions overall. The trade-off between fairness and
+          accuracy often arises because addressing bias or discrimination in a
+          model's predictions may result in a decrease in overall accuracy. This
+          is because bias mitigation techniques, such as modifying the model's
+          algorithms or adjusting the training data, may lead to a reduction in
+          predictive performance. As a result, when evaluating machine learning
+          models, developers often need to make a trade-off between fairness and
+          accuracy. The Pareto curve can help visualize this trade-off by
+          showing the range of solutions where improvements in fairness are
+          accompanied by decreases in accuracy, and vice versa. Finding the
+          optimal balance between fairness and accuracy involves selecting a
+          point on the Pareto curve that best aligns with the priorities and
+          values of the stakeholders involved.
+        </p>
+        <p>Sources: Kearns, Michael. The Ethical Algorithm. 2020.</p>
+      </section>
+
+      <h2>Pareto Curve Simulation</h2>
+
+      <div id="scatterplot"></div>
+      <button id="generateButton">Generate Points</button>
+      <button id="showCurve" class="curve">Show Pareto Curve</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
