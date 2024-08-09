@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; 
+
+}
+
+.content {
+    margin-left: 120px; 
+    padding: 20px;
+    box-sizing: border-box; 
+    
+}
+
+h1 {
+    color: #333;
+    margin-top: 0; 
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+    margin-top: 0; 
+}
+
+ul {
+    color: #666;
+    line-height: 1.6;
+    margin-left: 20px; 
+    margin-top: 0;
+}
+
+/* Inti's page4 style css do not change */
+
+#results {
+  margin-top: 20px;
+}
+
+#data {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+#demoData, #surveyedData {
+  flex: 1;
+}
+
+#demoData ul, #surveyedData ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#demoData h3, #surveyedData h3 {
+  text-align: left;
+}
+
+
+
+
+/* Style the accordion */
+.accordion {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+
+}
+
+/* Style the buttons inside the accordion */
+.accordion-btn {
+  background-color: lightblue;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Style the button when hovered */
+.accordion button:hover {
+  background-color: #ddd;
+}
+
+/* Style the accordion panel */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 800px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+
+}
+
+/* Show the panel when the button is clicked */
+.active {
+  max-height: 800px; /* Adjust as needed */
+}
+
+
+
+
+  
