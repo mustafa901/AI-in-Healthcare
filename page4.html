@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Differential Privacy</title>
+    <link rel="stylesheet" href="page.css" />
+  </head>
+  <body>
+    <div class="content">
+      <h1>Preserving Privacy through Differential Privacy:</h1>
+
+      <section>
+        <h2>
+          Large Language Models (LLMs) in Healthcare and Privacy Concerns:
+        </h2>
+        <p>
+          Recent researches on the use of LLMs in health care, marked improved
+          accuracy and clinical relevance of responses from LLMs such as GPT-4,
+          especially in addressing complex health care inquiries. The improved
+          accuracy and clinical relevance with LLMs mark a paradigm shift in
+          digital health tools and Virtual Assistants (VAs). Such LLM are
+          already being adapted and integrated into existing VA platforms,
+          offering cost-effective, scalable, and inclusive solutions. This
+          increased application of LLMs in healthcare comes with increased risks
+          as we move toward more personalized digital health ecosystems.
+          Therefore, a thorough understanding of the implications of LLM use is
+          necessary by healthcare professionals to patients to develop and
+          adhere to ethical guidelines, regulatory frameworks, governance
+          principles, and privacy and safety measures.
+        </p>
+        <p>
+          Sources: Sezgin, Emre. “Redefining Virtual Assistants in Health Care:
+          The Future With Large Language Models.” Journal of Medical Internet
+          Research, vol. 26, no. 7, 2024, pp. e53225–e53225,
+          https://doi.org/10.2196/53225.
+        </p>
+        <p>
+          Large language models (LLMs) have been shown to memorize parts of
+          their training data, and when prompted appropriately, they will emit
+          the memorized training data verbatim. This is concerning because it
+          can violate patient privacy (exposing sensitive data), degrades , and
+          sometimes hurts fairness (some texts are memorized over others).
+          Memorization capability of LLMs significantly grows as (1) the
+          capacity of a model increases, (2) the number of times an example has
+          been duplicated increases, and (3) the number of tokens of context
+          used to prompt the model. Overall, memorization in LLMs is more
+          prevalent than previously believed and will likely get worse as models
+          continues to scale, at least without active mitigations Carlini et al.
+          (2022).
+        </p>
+        <p>
+          Source: Nicholas Carlini, Daphne Ippolito, Matthew Jagielski,
+          Katherine Lee, Florian Tramer, and Chiyuan Zhang. 2022. Quantifying
+          memorization across neural language models. arXiv preprint
+          arXiv:2202.07646
+        </p>
+        <h3>Differential Privacy:</h3>
+        <p>
+          Differential Privacy is a relatively new approach to
+          privacy-preserving data analysis which ensures that (almost, and
+          quantifiably) no risk is incurred by joining a statistical database.
+          Application of differential privacy to the data used for these LLMs
+          training can reduce the risk of private information leaks. The idea is
+          to preserve privacy by adding enough noise to the original data so
+          that individuals can not be identified but also the noise does not
+          affect the integrity of the analysis done over the data.
+        </p>
+        <p>
+          Source: Dwork, Cynthia. “Differential Privacy: A Survey of Results.”
+          Theory and Applications of Models of Computation, Springer Berlin
+          Heidelberg, pp. 1–19, https://doi.org/10.1007/978-3-540-79228-4_1.
+        </p>
+
+        <div>
+          <p>
+            Let's imagine we are conducting a statistics about what percentage
+            of students on campus have STI. Obviously, this information is
+            sensitive and private. To ensure the privacy of the respondents we
+            can use differentially private approach to collect the data. We ask
+            each respondednt to flip a coin if it lands heads then tell us the
+            truth about having STI. Else if it lands tails then flip again and
+            answer "yes" if heads and 'no' is tails. The result is that when we
+            ask people whether they have STI, three-quarters of the time they
+            tell us the truth (half the time the protocol tells them to tell us
+            the truth, and if instead the protocol tells them to respond with a
+            random answer, then half of that time they just happen to tell us
+            the right answer at random). The remaining one-quarter of the time
+            they tell us a lie. But the errors/noise have been added in a way
+            that we have no way of telling answers from lies for an individual
+            observation. This gives any respondednt a plausible deniability. But
+            since we know how the erros were introduced we can still deduce the
+            statistic of interest that is the percent of Students with STI.
+            Whatever percent of the survey (including error) reported having STI
+            just 3/4 of that is our actual estimate. In the simulation below try
+            out how this actually works and gives a pretty good estimate of the
+            true statistic.
+          </p>
+        </div>
+
+        <div class="accordion">
+          <button class="accordion-btn">Differential Privacy Simulation</button>
+          <div class="panel">
+            <div>
+              <li></li>
+              <button onclick="generateData()" class="sim_button">
+                Generate 500 Random Observations
+              </button>
+              <button onclick="calculateTrueProportions()" class="sim_button">
+                Calculate True Proportions
+              </button>
+              <button onclick="simulateSurvey()" class="sim_button">
+                Simulate Survey Methods
+              </button>
+              <button
+                onclick="calculateSurveyedProportions()"
+                class="sim_button"
+              >
+                Calculate Surveyed Proportions
+              </button>
+            </div>
+
+            <div id="data"></div>
+
+            <div id="results">
+              <h2>Results</h2>
+              <p>
+                Actual proportion of students with STI:
+                <span id="actualProportion"></span>
+              </p>
+              <p>
+                Proportion calculated from surveyed data with errors:
+                <span id="surveyedProportion"></span>
+              </p>
+              <p>
+                3/4 of the proportion calculated from surveyed data (deduced
+                estimate):
+                <span id="trueYesProportion"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
