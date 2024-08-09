@@ -1,0 +1,42 @@
+#scatterplot {
+    width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    position: relative;
+    border: 1px solid #aaa;
+    background-color: lightblue;
+    border-width: 5px;
+  }
+  
+  #generateButton,
+  #showCurve,
+  #changeShape {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .axis-label {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .x-axis-label {
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .y-axis-label {
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    left: -40px;
+  }
+  
+  .content {
+    margin-left: 200px;
+    padding: 25px;
+    transition: margin-left 0.3s ease-in-out;
+  }
