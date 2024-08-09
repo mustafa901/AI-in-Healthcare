@@ -1,0 +1,14 @@
+Website link: https://al-ashir-intisar.github.io/
+Repository Link: https://github.com/Al-Ashir-Intisar/Al-Ashir-Intisar.github.io
+
+
+Usability - is your implementation done in a way that a user can navigate and use your website without any additional instruction?
+Implementation: Our website is quite self explanatory with Navigation buttons and titles. The landing page has a list of contents in the website with descriptive button names to go to individual pages. Inside each page each paragraph is headed by a descriptive heading. For the interactive sections of the website there are descriptions of how to interact for each interaction section. 
+Educational value - does your implementation effectively teach a user about your topic? Does this content make sense for the personas you have developed?
+Implementation: Our website can be divided into 2 sections where the first 3 pages describe what AI is and how they are used or potentially going to be used in the Healthcare industry. And the Last 2 pages describe the ethical implications like privacy, and fairness in context with interactive simulation. The first 3 pages make sense of the regular user like our persona 1: Emily is a 28-year-old professional working in marketing. She is health-conscious and likes to stay updated on the latest advancements in healthcare. She is moderately comfortable with technology but prefers user-friendly interfaces. And the last 2 pages make sense for our persona 2: James is a 45-year-old physician with extensive experience in primary care. He is interested in incorporating AI into his practice to improve efficiency and patient care but is cautious about potential ethical implications. 
+Interactivity - does your implementation have interactive elements that enhance the user experience?
+Implementation: We put extra work to make the learning of privacy and fairness in the use of AI in healthcare more interactive and fun. While talking about differential privacy we created an interactive section where users can simulate a differentially private method of conducting statistics that protects the privacy of individual survey participants. While describing the idea of trade off between fairness and accuracy in a machine learning model we created an interactive pareto curve. 
+Aesthetics - is your implementation visually appealing?
+Implementation: We tried to keep the color scheme simple so we chose a shade of blue and white as we didn’t want the colors to be the main focus.We kept the aesthetics(fonts, font-size, padding…) consistent to have a clean aesthetic and user-appropriate. 
+
+Note: We could not figure out how to make the graph work on page5 in the published website. When the individual page (page5) is launched the grah works fine. It only doesn't work in the published website. We plan to present this page by launching it separately. 
